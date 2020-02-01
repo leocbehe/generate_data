@@ -1,9 +1,11 @@
 import random
+import math
 
 def generate_data(args):
    distribution_function = create_function(args.curve)
    data_array = calculate_data_points(distribution_function, uncertainty=args.uncertainty, \
                          domain=args.domain, interval=args.interval)
+   print(data_array)
    
    return data_array
 
@@ -14,6 +16,8 @@ def create_function(func_type):
       return lambda x: x
    elif func_type == "square":
       return lambda x: x ** 2
+   elif func_type == "gaussian":
+      return lambda x: math.e ** -(x ** 2)
    else:
       return None
 

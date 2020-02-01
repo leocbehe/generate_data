@@ -2,7 +2,7 @@ import argparse
 
 def process():
    parser = argparse.ArgumentParser()
-   parser.add_argument("curve", choices=[ "constant", "linear", "square"], 
+   parser.add_argument("curve", choices=[ "constant", "linear", "square", "gaussian"], 
                         help="The type of curve that the data set will follow.")
    parser.add_argument("-o", "--output-file", dest="output_file", default="output.csv", 
                         help="The name of the output file to write to. (default: output.csv)")

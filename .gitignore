@@ -6,3 +6,6 @@ __pycache__
 
 #no csv output files
 *.csv
+
+#general
+*.pyc
